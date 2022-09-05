@@ -39,6 +39,7 @@ android {
 dependencies {
     api project(":lib_base")
     api 'com.tencent:mmkv:1.2.13'
+    api 'com.guolindev.permissionx:permissionx:1.6.4'
 
     implementation 'com.alibaba:arouter-api:1.5.2'
     kapt 'com.alibaba:arouter-compiler:1.5.2'
