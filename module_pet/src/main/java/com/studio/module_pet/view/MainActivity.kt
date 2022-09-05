@@ -14,6 +14,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         PermissionX.init(this).permissions(PermissionGroup.camera).request(object :RequestCallback{
             override fun onResult(
                 allGranted: Boolean,
