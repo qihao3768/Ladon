@@ -3,9 +3,11 @@ package com.studio.module_pet.view
 import android.os.Bundle
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.permissionx.guolindev.PermissionX
 import com.permissionx.guolindev.callback.RequestCallback
 import com.studio.lib_base.BaseActivity
+import com.studio.lib_common.arouter.Paths
 import com.studio.lib_common.permission.PermissionGroup
 import com.studio.module_pet.R
 
@@ -22,6 +24,7 @@ class MainActivity : BaseActivity() {
                 deniedList: MutableList<String>
             ) {
               Toast.makeText(this@MainActivity,"2222",Toast.LENGTH_SHORT).show()
+                ARouter.getInstance().build(Paths.app_activity_main).navigation()
             }
 
         })

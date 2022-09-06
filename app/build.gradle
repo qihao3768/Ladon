@@ -23,7 +23,9 @@ android {
 }
 
 dependencies {
-    implementation project(Modules.module_pet)
+    if (!isModule.toBoolean()){
+        implementation project(Modules.module_pet)
+    }
     implementation project(Modules.lib_common)
     implementation Libs.arouter_api
     kapt Libs.arouter_compiler

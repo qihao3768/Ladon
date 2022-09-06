@@ -1,15 +1,28 @@
 plugins {
-    id 'com.android.library'
+
     id 'org.jetbrains.kotlin.android'
 }
-apply from:'../global.gradle'
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply from: '../global.gradle'
 android {
-
     resourcePrefix Prefix.ability
+
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
 
 }
 
 dependencies {
     implementation project(Modules.lib_common)
-
 }
