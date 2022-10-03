@@ -15,7 +15,7 @@
             <option value="$PROJECT_DIR$/lib_ability" />
             <option value="$PROJECT_DIR$/lib_base" />
             <option value="$PROJECT_DIR$/lib_common" />
-            <option value="$PROJECT_DIR$/module_pet" />
+            <option value="$PROJECT_DIR$/module_visitor" />
           </set>
         </option>
       </GradleProjectSettings>

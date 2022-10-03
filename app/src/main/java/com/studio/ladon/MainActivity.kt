@@ -7,7 +7,6 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.studio.lib_base.BaseActivity
 import com.studio.lib_common.arouter.Paths
-import com.studio.module_pet.view.MainActivity
 
 @Route(path = Paths.app_activity_main)
 class MainActivity : BaseActivity() {

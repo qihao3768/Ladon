@@ -4,7 +4,7 @@
     package="com.studio.ladon">
 
     <application
-        android:name="com.studio.lib_common.GlobalApplication"
+        android:name="com.studio.lib_base.GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

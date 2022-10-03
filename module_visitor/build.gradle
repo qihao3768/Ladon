@@ -1,5 +1,4 @@
 plugins {
-
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
 }
@@ -15,8 +14,9 @@ kapt {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
+
 android {
-    resourcePrefix Prefix.pet
+    resourcePrefix Prefix.visitor
 
     sourceSets {
         main {

@@ -1,12 +1,26 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
 }
 
 apply from:'../global.gradle'
 
-android {
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
 
+android {
     resourcePrefix Prefix.base
+}
+
+dependencies {
+    implementation Libs.arouter_api
+    kapt Libs.arouter_compiler
+    
+    api Libs.mmkv
+    api Libs.permissionx
 
 }

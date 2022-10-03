@@ -14,16 +14,16 @@ object Modules {
     const val lib_base = ":lib_base"
     const val lib_common = ":lib_common"
     const val lib_ability = ":lib_ability"
-    const val module_pet = ":module_pet"
+    const val module_visitor = ":module_visitor"
 
 }
 
 object Prefix {
-    const val common = "common_"
-    const val base = "base_"
-    const val ability = "ability_"
     const val app = "app_"
-    const val pet = "pet_"
+    const val base = "base_"
+    const val common = "common_"
+    const val ability = "ability_"
+    const val visitor = "visitor_"
 }
 
 object Libs {
