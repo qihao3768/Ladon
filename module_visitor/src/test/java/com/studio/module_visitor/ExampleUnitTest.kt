@@ -1,4 +1,4 @@
-package com.studio.module_pet
+package com.studio.module_visitor
 
 import org.junit.Test
 

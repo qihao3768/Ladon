@@ -9,8 +9,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.tencent.mmkv.MMKV
 
 open class BaseActivity : AppCompatActivity() {
+    val mmkv: MMKV = MMKV.defaultMMKV()
     lateinit var offlineReceiver: ForceOfflineReceiver
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

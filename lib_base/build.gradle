@@ -4,7 +4,7 @@ plugins {
     id 'org.jetbrains.kotlin.kapt'
 }
 
-apply from:'../global.gradle'
+apply from: '../global.gradle'
 
 kapt {
     arguments {
@@ -19,8 +19,21 @@ android {
 dependencies {
     implementation Libs.arouter_api
     kapt Libs.arouter_compiler
-    
+
     api Libs.mmkv
     api Libs.permissionx
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.google.code.gson:gson:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api "com.squareup.okhttp3:okhttp:5.0.0-alpha.6"
+    api "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6"
+
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+
+    api 'com.github.getActivity:GsonFactory:6.3'
 
 }

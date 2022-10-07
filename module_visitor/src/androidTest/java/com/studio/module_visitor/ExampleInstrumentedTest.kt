@@ -1,4 +1,4 @@
-package com.studio.module_pet
+package com.studio.module_visitor
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
