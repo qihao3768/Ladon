@@ -1,12 +1,15 @@
 package com.studio.module_visitor.view
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.gyf.immersionbar.ktx.immersionBar
 import com.studio.lib_base.BaseActivity
+import com.studio.lib_base.LoginListener
+import com.studio.lib_base.checkLogin
 import com.studio.lib_common.arouter.Paths
-import com.studio.module_visitor.R
 import com.studio.module_visitor.databinding.VisitorActivityMainBinding
 
 
@@ -20,13 +23,30 @@ class VisitorMainActivity : BaseActivity() {
         setContentView(binding.root)
 
         immersionBar {
-            statusBarColor(R.color.white)
-            statusBarDarkFont(true)
+            fitsSystemWindows(true)
+            statusBarColor(com.studio.lib_common.R.color.common_FE9520)
         }
 
-        binding.visitorTextView2.setOnClickListener {
-            ARouter.getInstance().build(Paths.visitor_activity_login).navigation()
-        }
+        binding.visitorSearchEdit.addTextChangedListener(object :TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
+
+        binding.visitorSearchView.checkLogin(object :LoginListener{
+            override fun next() {
+                ARouter.getInstance().build(Paths.app_activity_main).navigation()
+            }
+
+        })
     }
 }

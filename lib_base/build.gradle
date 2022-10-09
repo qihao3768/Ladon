@@ -36,4 +36,14 @@ dependencies {
 
     api 'com.github.getActivity:GsonFactory:6.3'
 
+    api 'com.github.getActivity:TitleBar:9.5'
+
+    api 'io.github.youth5201314:banner:2.2.2'
+
+    api 'com.github.getActivity:ShapeView:8.5'
+
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    api "androidx.fragment:fragment-ktx:1.5.3"
+
 }

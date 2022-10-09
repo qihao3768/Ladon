@@ -6,34 +6,176 @@
     android:layout_height="match_parent"
     tools:context=".view.VisitorLoginActivity">
 
-    <ImageView
-        android:id="@+id/visitor_imageview"
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/visitor_skip_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/permissionx_ic_alert"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:text="@string/visitor_skip_main"
+        android:textColor="@color/common_FE9520"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
-
-    <ImageView
-        android:id="@+id/visitor_imageview2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/permissionx_ic_alert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/visitor_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/visitor_imageview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.hjq.shape.view.ShapeImageView
+        android:id="@+id/visitor_login_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/visitor_login_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/visitor_login_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor_login_logo">
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/visitor_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/visitor_login_phone"
+            android:inputType="phone"
+            android:paddingStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="30dp"
+            app:shape_solidColor="@color/common_F5F5F5" />
+
+        <com.hjq.shape.view.ShapeImageView
+            android:id="@+id/visitor_login_clear"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="10dp"
+            android:src="@drawable/common_icon_clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/visitor_login_phone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/visitor_login_sms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor_login_phone_layout"
+        app:layout_goneMarginTop="20dp">
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/visitor_login_sms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="@string/visitor_login_sms"
+            android:inputType="phone"
+            android:paddingStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="30dp"
+            app:shape_solidColor="@color/common_F5F5F5" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/visitor_login_send_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="10dp"
+            android:text="@string/visitor_login_send_sms"
+            android:textColor="@color/common_FE9520"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/visitor_login_sms"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+    
+    <com.hjq.shape.view.ShapeButton
+        android:id="@+id/visitor_login"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:shape_solidColor="@color/common_FE9520"
+        app:shape_radius="25dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor_login_sms_layout"
+        android:layout_marginTop="90dp"
+        android:text="@string/visitor_login"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal">
+        <com.hjq.shape.view.ShapeCheckBox
+            android:id="@+id/login_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已阅读并同意"
+            android:textSize="12dp"
+            android:textColor="@color/common_000000"
+            android:paddingStart="5dp"
+            app:shape_buttonCheckedDrawable="@drawable/visitor_radio_selected"
+            app:shape_buttonDrawable="@drawable/visitor_radio_default"
+            android:checked="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+        <com.hjq.shape.view.ShapeTextView
+            android:padding="5dp"
+            android:id="@+id/tv_user_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="《用户协议》"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/common_FE9520"
+            app:layout_constraintStart_toEndOf="@+id/login_check"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.hjq.shape.view.ShapeTextView
+           android:padding="5dp"
+            android:id="@+id/tv_privacy_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="《隐私政策》"
+            android:textColor="@color/common_FE9520"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_agreement"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_agreement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

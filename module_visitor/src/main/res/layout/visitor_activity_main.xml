@@ -6,14 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".view.VisitorMainActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/visitor_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/common_FE9520"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.studio.lib_common.component.ClearEditText
+            android:visibility="gone"
+            android:id="@+id/visitor_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/common_shape_corner"
+            android:drawablePadding="5dp"
+            android:hint="@string/visitor_search_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.youth.banner.Banner
+        android:id="@+id/visitor_home_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintDimensionRatio="h,1:0.56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor_search_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/visitor_textView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="pet2222222"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/visitor_home_banner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/visitor_home"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/permissionx_ic_alert"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_splash_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,20 +18,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-    <TextView
-        android:id="@+id/visitor_login"
+    <com.hjq.shape.view.ShapeTextView
+        app:shape_radius="10dp"
+        android:textColor="@color/common_FE9520"
+        android:id="@+id/visitor_skip"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:padding="10dp"
         android:textSize="12sp"
         android:textStyle="bold"
-        android:text="@string/app_splash_company"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/app_splash_skip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="common_FE9520">#FE9520</color>
+    <color name="common_CCCCCC">#CCCCCC</color>
+    <color name="common_FFFFFF">#FFFFFF</color>
+    <color name="common_F5F5F5">#F5F5F5</color>
+    <color name="common_000000">#000000</color>
+    <color name="common_transparent">#00000000</color>
 
 </resources>

@@ -1,18 +1,17 @@
 package com.studio.lib_base
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
+
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.tencent.mmkv.MMKV
+import kotlinx.coroutines.Job
 
 open class BaseActivity : AppCompatActivity() {
     val mmkv: MMKV = MMKV.defaultMMKV()
+    val job= Job()
     lateinit var offlineReceiver: ForceOfflineReceiver
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +20,10 @@ open class BaseActivity : AppCompatActivity() {
         actionBar?.hide()
         //加入activity收集器
         ActivityCollector.addActivity(this)
+    }
+
+    fun toast(message: String) {
+        Toast.makeText(GlobalApplication.context, message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onResume() {
